@@ -70,7 +70,7 @@ function(){
         
         var btnInvio= document.getElementById("invia");
         var numeriInseriti=[];
-        
+        var contatore= document.getElementById("contatore");
 
         // Dopo che sono stati inseriti i 5 numeri, 
         btnInvio.addEventListener("click", 
@@ -78,6 +78,7 @@ function(){
                 if(numeriInseriti.length<5){
                     numeriInseriti.push(parseInt(document.getElementById("input").value));
                     console.log(numeriInseriti);
+                    contatore.innerHTML="numeri inseriti"+numeriInseriti.length;
                 }else{
                     alert("Hai già inserito 5 valori!");
                 }
@@ -116,7 +117,7 @@ function(){
                     document.getElementById("risultato").innerHTML="Nessun numero è stato indovinato! <br>Il tuo punteggio è 0 D;";
                 }
 
-                
+
             }
         );
 
