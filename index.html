@@ -13,11 +13,16 @@
         <div class="user-input">
             
             <label for="userInput">Inserisci i numeri che ti ricordi(uno alla volta) appena il timer finisce: </label><br>
-            <input id="input" type="number" name="userInput" disabled value="" /><br>
+            <input id="input" type="number" name="userInput" disabled value="" min="1" max="20"><br>
             <button id="invia" type="button" name="btnNumeri" >
                 Invia
             </button>
+            <span id="contatore"></span>
+
         
+        </div>
+        <div class="termina-gioco">
+            <button id="termina">Confronta i numeri</button>
         </div>
 
 
