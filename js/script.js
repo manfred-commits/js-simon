@@ -84,7 +84,13 @@ function(){
         
             }
             console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
-            alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
+            if(risultato.length!=0){
+                alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
+                document.getElementById("risultato").innerHTML="I numeri indovinati sono: " + risultato.join(", ") +"<br> Il tuo punteggio è: " + risultato.length;
+
+            }else{
+                alert("Nessun numero è stato indovinato! \nIl tuo punteggio è 0 D;")
+            }
         
         }, 2000);
 
