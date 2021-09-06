@@ -75,12 +75,12 @@ function(){
         // Dopo che sono stati inseriti i 5 numeri, 
         btnInvio.addEventListener("click", 
             function(){
-                if(numeriInseriti.length<5){
+                if(numeriInseriti.length<5 && document.getElementById("input").value>0){
                     numeriInseriti.push(parseInt(document.getElementById("input").value));
                     console.log(numeriInseriti);
                     contatore.innerHTML="<strong>Numeri inseriti: "+numeriInseriti.length+"</strong>";
                 }else{
-                    alert("Hai già inserito 5 valori!");
+                    alert("Hai già inserito 5 valori o il numero da te inserito non è valido");
                 }
             }
         );
