@@ -32,6 +32,8 @@ function randomNumber(num1, num2){
 
 var numeriCasuali = [];
 var numGenerati = 0;
+
+
 while(numeriCasuali.length<5){
 
     numGenerati = randomNumber(1,10);
@@ -54,10 +56,19 @@ var numeriInseriti=[];
 
 timer = setTimeout(function() {
     
+    // Dopo che sono stati inseriti i 5 numeri, 
     while(numeriInseriti.length<5){
         numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
+        
     }
     console.log(numeriInseriti);
+
+   
+
+
+
+
+
 }, 2000);
 
 
