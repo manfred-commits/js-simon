@@ -43,5 +43,14 @@ while(numeriCasuali.length<5){
 }
 console.log(numeriCasuali);
 
+alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
+
+
+// Da li parte un timer di 30 secondi.
+
+
+
+
+
 
 // /SEZIONE PRINCIPALE DEL CODICE
