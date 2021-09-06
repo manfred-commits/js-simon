@@ -40,7 +40,7 @@ function(){
     var numeriCasuali = [];
     var numeriInseriti=[];
     var risultato= [];
-
+    document.getElementById("risultato").innerHTML="";
 
         while(numeriCasuali.length<5){
         
