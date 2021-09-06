@@ -90,6 +90,7 @@ function(){
 
             }else{
                 alert("Nessun numero è stato indovinato! \nIl tuo punteggio è 0 D;")
+                document.getElementById("risultato").innerHTML="Nessun numero è stato indovinato! <br>Il tuo punteggio è 0 D;";
             }
         
         }, 2000);
