@@ -7,6 +7,7 @@
 body{
     background-color: brown;
     font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
 button{
@@ -33,7 +34,7 @@ input.input-formatting{
 
 /* sezione container form */
 .container-form{
-    background-color: white;
+    background-color: rgba(00,00,00,0.5);
     width: 80%;
     margin: auto;
     margin-top: 30px;
@@ -71,6 +72,7 @@ input.input-formatting{
 .user-input #input{
     margin: 20px 0;
     width: 300px;
+    color: black;
 }
 .user-input button#invia{
     margin: 5px 0;
@@ -90,3 +92,13 @@ input.input-formatting{
     margin: 10px 0;
 }
 /* /sezione termina gioco */
+
+/* footer section */
+footer{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-top: 20px;
+    color:black;
+}
+/* /footer section */
