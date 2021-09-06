@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* general rules */
+body{
+    background-color: brown;
+}
+
+/* /general rules */
+
+
+
+
+
+/* sezione container form */
+.container-form{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+}
+ 
+.container-form .container-title{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+/* /sezione container form */
+
+
+
+
+
+/* sezione user input */
+
+.user-input{
+    width: 100%;
+    text-align: center;
+
+}
+.user-input button#invio{
+    margin-bottom: 20px;
+}
+
+
+.user-input #input{
+    margin-bottom: 20px;
+}
+/* /sezione user input */
+
+
+
+
+/* sezione termina gioco */
+
+.termina-gioco{
+    text-align: center;
+    margin: 10px 0;
+}
+.termina-gioco button{
+    margin: 10px 0;
+}
+/* /sezione termina gioco */

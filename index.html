@@ -4,30 +4,40 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- link to css -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- /link to css -->
         <title>Simon Says</title>
     </head>
     <body>
-        <h1>Simon Says</h1>
-        <p>Ricorda i numeri generati dal computer, che ti verranno forniti all'inizio del gioco! <br>Se li indovinerai tutti, vinci!</p>
-        <button id="invio">Gioca </button>
-        <div class="user-input">
+        <div class="container-form">
+            <div class="container-title">
+                <h1>Simon Says</h1>
+                <p>Ricorda i numeri generati dal computer, che ti verranno forniti all'inizio del gioco! <br>Se li indovinerai tutti, vinci!</p>
+
+            </div>
+            <div class="user-input">
+                <button id="invio">Gioca </button> <br>
+                
+                <label for="userInput">Inserisci i numeri che ti ricordi(uno alla volta) appena il timer finisce: </label><br>
+                <input id="input" type="number" name="userInput" disabled value="" min="1" max="20"><br>
+                <button id="invia" type="button" name="btnNumeri" >
+                    Invia
+                </button>
+                <p id="contatore"></p>
+    
             
-            <label for="userInput">Inserisci i numeri che ti ricordi(uno alla volta) appena il timer finisce: </label><br>
-            <input id="input" type="number" name="userInput" disabled value="" min="1" max="20"><br>
-            <button id="invia" type="button" name="btnNumeri" >
-                Invia
-            </button>
-            <p id="contatore"></p>
+            </div>
+            <div class="termina-gioco">
+                <p>Una volta inserito tutti i numeri, premi il tasto Confronta per il tuo risultato</p>
+                <button id="termina">Confronta i numeri</button>
+                <h2 id="risultato"></h2>
+            </div>
+    
+    
 
-        
         </div>
-        <div class="termina-gioco">
-            <p>Una volta inserito tutti i numeri, premi il tasto Confronta per il tuo risultato</p>
-            <button id="termina">Confronta i numeri</button>
-        </div>
-
-
-        <h2 id="risultato"></h2>
 
 
 
