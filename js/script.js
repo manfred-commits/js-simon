@@ -75,7 +75,7 @@ function(){
         // Dopo che sono stati inseriti i 5 numeri, 
         btnInvio.addEventListener("click", 
             function(){
-                if(numeriInseriti.length<5 && document.getElementById("input").value>0){
+                if(numeriInseriti.length<5 && document.getElementById("input").value>0 && !numeriInseriti.includes(parseInt(document.getElementById("input").value))){
                     numeriInseriti.push(parseInt(document.getElementById("input").value));
                     console.log(numeriInseriti);
                     contatore.innerHTML="<strong>Numeri inseriti: "+numeriInseriti.length+"</strong>";
