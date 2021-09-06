@@ -23,6 +23,7 @@ input.input-formatting{
     border: 1px solid #000000;
     border-radius: 5px;
     text-align: center;
+    font-size: 18px;
 }
 /* /general rules */
 
@@ -69,6 +70,7 @@ input.input-formatting{
 
 .user-input #input{
     margin: 20px 0;
+    width: 300px;
 }
 .user-input button#invia{
     margin: 5px 0;
