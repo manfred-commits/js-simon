@@ -6,8 +6,24 @@
 /* general rules */
 body{
     background-color: brown;
+    font-family: 'Open Sans', sans-serif;
 }
 
+button{
+    font-size: 20px;
+    font-weight: 600;
+    color:#000000;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+}
+input.input-formatting{
+    padding: 7px 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
 /* /general rules */
 
 
@@ -25,6 +41,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
+    box-shadow: 2px 2px 8px 3px rgba(00,00,00,0.5);
 }
  
 .container-form .container-title{
@@ -51,7 +68,10 @@ body{
 
 
 .user-input #input{
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+.user-input button#invia{
+    margin: 5px 0;
 }
 /* /sezione user input */
 

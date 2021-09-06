@@ -78,7 +78,7 @@ function(){
                 if(numeriInseriti.length<5){
                     numeriInseriti.push(parseInt(document.getElementById("input").value));
                     console.log(numeriInseriti);
-                    contatore.innerHTML="Numeri inseriti: "+numeriInseriti.length;
+                    contatore.innerHTML="<strong>Numeri inseriti: "+numeriInseriti.length+"</strong>";
                 }else{
                     alert("Hai già inserito 5 valori!");
                 }
