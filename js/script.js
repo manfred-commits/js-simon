@@ -53,6 +53,7 @@ alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
 
 var timer;
 var numeriInseriti=[];
+var risultato= [];
 
 timer = setTimeout(function() {
     
@@ -64,7 +65,22 @@ timer = setTimeout(function() {
     console.log(numeriInseriti);
 
    
+    
+    // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+    for(var i=0; i<=numeriInseriti.length; i++){
 
+
+        // se l'array numeriCasuali, generato al principio include, i numeri contenuti nell'array numeriInseriti e
+        // se non è vero che l'array risultato, (contenete i numeri che corrispondono ai numeriCasuali == a i numeri Inseriti)  contienre il numero che si sta inserendo(questo codice è per evitare ripetizioni):
+        // allora pusha il numero nell'array risultato;
+
+        if(numeriCasuali.includes(numeriInseriti[i]) && !risultato.includes(numeriInseriti[i])){
+            risultato.push(numeriInseriti[i]);
+        }
+
+    }
+    console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
+    alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
 
 
 
