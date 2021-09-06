@@ -44,22 +44,27 @@ function(){
     
     while(numeriCasuali.length<5){
         
-            numGenerati = randomNumber(1,10);
+        numGenerati = randomNumber(1,10);
             
-            if(!numeriCasuali.includes(numGenerati)){
+        if(!numeriCasuali.includes(numGenerati)){
                 
                 numeriCasuali.push(numGenerati);
-            }
         }
-        console.log(numeriCasuali);
+    }
+    console.log(numeriCasuali);
         
-        alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
+    alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
         
         
-        // Da li parte un timer di 30 secondi.
-        // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-        var inputNumber= document.getElementById("input");
-        timer = setTimeout(function() {
+    // Da li parte un timer di 30 secondi.
+    // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+    var inputNumber= document.getElementById("input");
+    
+
+    inputNumber.setAttribute("disabled", "");
+
+
+    timer = setTimeout(function() {
             
             
             alert("Inserisci i numeri che ti ricordi");
