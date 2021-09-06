@@ -30,62 +30,74 @@ function randomNumber(num1, num2){
 
 // 1.1 genero un array di numeri casuali (che non si ripetono)
 
-var numeriCasuali = [];
 var numGenerati = 0;
-
-
-while(numeriCasuali.length<5){
-
-    numGenerati = randomNumber(1,10);
-
-    if(!numeriCasuali.includes(numGenerati)){
-
-        numeriCasuali.push(numGenerati);
-    }
-}
-console.log(numeriCasuali);
-
-alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
-
-
-// Da li parte un timer di 30 secondi.
-// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-
 var timer;
-var numeriInseriti=[];
-var risultato= [];
 
-timer = setTimeout(function() {
+document.getElementById("invio").addEventListener("click",
+function(){
     
-    // Dopo che sono stati inseriti i 5 numeri, 
-    while(numeriInseriti.length<5){
-        numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
+    
+    var numeriCasuali = [];
+    var numeriInseriti=[];
+    var risultato= [];
+
+
+        while(numeriCasuali.length<5){
         
-    }
-    console.log(numeriInseriti);
-
-   
-    
-    // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-    for(var i=0; i<=numeriInseriti.length; i++){
-
-
-        // se l'array numeriCasuali, generato al principio include, i numeri contenuti nell'array numeriInseriti e
-        // se non è vero che l'array risultato, (contenete i numeri che corrispondono ai numeriCasuali == a i numeri Inseriti)  contienre il numero che si sta inserendo(questo codice è per evitare ripetizioni):
-        // allora pusha il numero nell'array risultato;
-
-        if(numeriCasuali.includes(numeriInseriti[i]) && !risultato.includes(numeriInseriti[i])){
-            risultato.push(numeriInseriti[i]);
+            numGenerati = randomNumber(1,10);
+        
+            if(!numeriCasuali.includes(numGenerati)){
+        
+                numeriCasuali.push(numGenerati);
+            }
         }
+        console.log(numeriCasuali);
+        
+        alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
+
+
+        // Da li parte un timer di 30 secondi.
+        // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+
+        timer = setTimeout(function() {
+            
+            // Dopo che sono stati inseriti i 5 numeri, 
+            while(numeriInseriti.length<5){
+                numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
+                
+            }
+            console.log(numeriInseriti);
+        
+           
+            
+            // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+            for(var i=0; i<=numeriInseriti.length; i++){
+        
+        
+                // se l'array numeriCasuali, generato al principio include, i numeri contenuti nell'array numeriInseriti e
+                // se non è vero che l'array risultato, (contenete i numeri che corrispondono ai numeriCasuali == a i numeri Inseriti)  contienre il numero che si sta inserendo(questo codice è per evitare ripetizioni):
+                // allora pusha il numero nell'array risultato;
+        
+                if(numeriCasuali.includes(numeriInseriti[i]) && !risultato.includes(numeriInseriti[i])){
+                    risultato.push(numeriInseriti[i]);
+                }
+        
+            }
+            console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
+            alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
+        
+        }, 2000);
 
     }
-    console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
-    alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
+);
 
 
 
 
-}, 2000);
+
+
+
+
 
 
 
