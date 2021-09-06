@@ -47,7 +47,18 @@ alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
 
 
 // Da li parte un timer di 30 secondi.
+// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 
+var timer;
+var numeriInseriti=[];
+
+timer = setTimeout(function() {
+    
+    while(numeriInseriti.length<5){
+        numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
+    }
+    console.log(numeriInseriti);
+}, 2000);
 
 
 
