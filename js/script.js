@@ -34,45 +34,45 @@ var numGenerati = 0;
 var timer;
 
 document.getElementById("invio").addEventListener("click",
-function(){
-    
-    
-    var numeriCasuali = [];
-    var risultato= [];
-    
-    document.getElementById("risultato").innerHTML="";
-    
-    while(numeriCasuali.length<5){
+    function(){
         
-        numGenerati = randomNumber(1,10);
+        var numeriCasuali = [];
+        var risultato= [];
+        
+        
+        document.getElementById("risultato").innerHTML="";
+        
+        while(numeriCasuali.length<5){
             
-        if(!numeriCasuali.includes(numGenerati)){
+            numGenerati = randomNumber(1,10);
                 
-                numeriCasuali.push(numGenerati);
+            if(!numeriCasuali.includes(numGenerati)){
+                    
+                    numeriCasuali.push(numGenerati);
+            }
         }
-    }
-    console.log(numeriCasuali);
-        
-    alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
-        
-        
-    // Da li parte un timer di 30 secondi.
-    // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-    var inputNumber= document.getElementById("input");
-
-
-    inputNumber.setAttribute("disabled", "");
-
-
-    timer = setTimeout(function() {
+        console.log(numeriCasuali);
+            
+        alert("I numeri generati da inserire, sono: "+numeriCasuali.join(", "));
             
             
-            alert("Inserisci i numeri che ti ricordi");
+        // Da li parte un timer di 30 secondi.
+        // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+        var inputNumber= document.getElementById("input");
+
+
+        inputNumber.setAttribute("disabled", "");
+
+
+        timer = setTimeout(function() {
+                
+                
+                alert("Inserisci i numeri che ti ricordi");
+                
+                inputNumber.removeAttribute("disabled");
+                
+            }, 2000);
             
-            inputNumber.removeAttribute("disabled");
-            
-        }, 2000);
-        
         var btnInvio= document.getElementById("invia");
         var numeriInseriti=[];
         var contatore= document.getElementById("contatore");
@@ -89,35 +89,35 @@ function(){
                 }
             }
         );
-        
+            
 
 
         // il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-        
+            
 
         var btnTermina= document.getElementById("termina");
 
         btnTermina.addEventListener("click",
             function(){
                 if(numeriInseriti.length==5){
-                    
+                        
                     for(var i=0; i<=numeriInseriti.length; i++){
-                
-                
+                    
+                    
                         // se l'array numeriCasuali, generato al principio include, i numeri contenuti nell'array numeriInseriti e
                         // se non è vero che l'array risultato, (contenete i numeri che corrispondono ai numeriCasuali == a i numeri Inseriti)  contienre il numero che si sta inserendo(questo codice è per evitare ripetizioni):
                         // allora pusha il numero nell'array risultato;
-                
+                    
                         if(numeriCasuali.includes(numeriInseriti[i]) && !risultato.includes(numeriInseriti[i])){
                             risultato.push(numeriInseriti[i]);
                         }
-                
+                    
                     }
                     console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
                     if(risultato.length!=0){
                         alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
                         document.getElementById("risultato").innerHTML="I numeri indovinati sono: " + risultato.join(", ") +"<br> Il tuo punteggio è: " + risultato.length;
-            
+                
                     }else{
                         alert("Nessun numero è stato indovinato! \nIl tuo punteggio è 0 D;")
                         document.getElementById("risultato").innerHTML="Nessun numero è stato indovinato! <br>Il tuo punteggio è 0 D;";
@@ -133,17 +133,17 @@ function(){
 
 
 
-        // 
-        // while(numeriInseriti.length<5){
-        //     numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
-            
-        // }
-        // console.log(numeriInseriti);
-    
-       
+            // 
+            // while(numeriInseriti.length<5){
+            //     numeriInseriti.push(parseInt(prompt("Inserisci i numeri precedentemente visti: ")));
+                
+            // }
+            // console.log(numeriInseriti);
         
-        // 
-    
+        
+            
+            // 
+        
 
     }
 );
