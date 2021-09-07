@@ -31,11 +31,11 @@ function randomNumber(num1, num2){
 // 1.1 genero un array di numeri casuali (che non si ripetono)
 
 var numGenerati = 0;
-var timer;
 
 document.getElementById("invio").addEventListener("click",
-    function(){
-        
+function(){
+    
+        var timer=0;
         var numeriCasuali = [];
         var risultato= [];
         
@@ -74,8 +74,8 @@ document.getElementById("invio").addEventListener("click",
             }, 2000);
             
         var btnInvio= document.getElementById("invia");
-        var numeriInseriti=[];
         var contatore= document.getElementById("contatore");
+        var numeriInseriti=[];
 
         // Dopo che sono stati inseriti i 5 numeri, 
         btnInvio.addEventListener("click", 
@@ -113,6 +113,8 @@ document.getElementById("invio").addEventListener("click",
                         }
                     
                     }
+
+                    numeriInseriti=[];
                     console.log("Numeri inseriti dall'utente che combaciano con i numeri generati a caso: "+risultato.join(", "));
                     if(risultato.length!=0){
                         alert("I numeri indovinati sono: " + risultato.join(", ") +" il tuo punteggio è: " + risultato.length);
